@@ -16,16 +16,16 @@
 
 ## Setup Instructions
 1. **Clone the Repository**:
-   ```bash
+   ```
    git clone <repository-url>
    cd js-heap
    ```
 2. **Install Dependencies**:
-    ```bash
+    ```
     npm install
     ```
 3. **Run Tests**:
-    ```bash
+    ```
     npm test
     ```
 
@@ -53,22 +53,22 @@ js-heap/
 
 ### Development Process:
 1. Create a feature branch:
-    ```bash
+    ```
     git checkout develop
     git branch feature/<feature-name>
     git checkout feature/<feature-name>
     ```
 2. Commit changes:
-    ```bash
+    ```
     git add .
     git commit -m "Implement <feature-name>"
     ```
 3. Push and create a Pull Request:
-    ```bash
+    ```
     git push origin feature/<feature-name>
     ```
 4. Merge to develop after review:
-    ```bash
+    ```
     git checkout develop
     git merge feature/<feature-name>
     git push origin develop
@@ -76,7 +76,7 @@ js-heap/
     Conflict Resolution
     
     If a merge conflict occurs, edit the conflicting files, then:
-    ```bash
+    ```
     git add .
     git commit
     ```
@@ -84,7 +84,7 @@ js-heap/
 ## Running Tests
 - Tests are written using Jest and located in tests/.
 - Run:
-    ```bash
+    ```
     npm test
     ```
 - Add new tests in `tests/heap.test.js` .
@@ -92,3 +92,14 @@ js-heap/
 ## CI/CD
 - GitHub Actions: Automatically runs tests on pushes to `main` or `develop`, and on Pull Requests.
 - Check the "Actions" tab in the GitHub repository for CI results.
+
+## Other
+
+對比 C++ 和 JavaScript 流程
+| 功能 | C++ (CMake) | JavaScript (Node.js) |
+|------|-------------|----------------------|
+| 專案配置 | `CMakeLists.txt` | `package.json` |
+| 依賴管理 | `FetchContent` (Google Test) | `npm install` (Jest) |
+| 編譯 | `cmake .. && make` | 不需要（JavaScript 是解釋型語言） |
+| 測試 | `ctest` | `npm test` (Jest) |
+| CI/CD | GitHub Actions (CMake + Make) | GitHub Actions (npm test) |
