@@ -92,3 +92,14 @@ js-heap/
 ## CI/CD
 - GitHub Actions: Automatically runs tests on pushes to `main` or `develop`, and on Pull Requests.
 - Check the "Actions" tab in the GitHub repository for CI results.
+
+## Other
+
+對比 C++ 和 JavaScript 流程
+| 功能 | C++ (CMake) | JavaScript (Node.js) |
+|------|-------------|----------------------|
+| 專案配置 | `CMakeLists.txt` | `package.json` |
+| 依賴管理 | `FetchContent` (Google Test) | `npm install` (Jest) |
+| 編譯 | `cmake .. && make` | 不需要（JavaScript 是解釋型語言） |
+| 測試 | `ctest` | `npm test` (Jest) |
+| CI/CD | GitHub Actions (CMake + Make) | GitHub Actions (npm test) |
